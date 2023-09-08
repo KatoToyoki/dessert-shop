@@ -1,4 +1,9 @@
 import React from 'react'
+import '@/style/globals.css';
+import { Col, Row } from "react-bootstrap"
+import News from '@/compoenents/News';
+
+import newsData from '@/pages/home/newsData.json'
 
 const Home = () => {
     return (
@@ -11,6 +16,18 @@ const Home = () => {
             </span>
             <div id='home_page_back1' />
             <div id='home_page_back2' />
+
+            <div className='space'>
+                <Row>
+                    {newsData.map((data) => {
+                        return (
+                            <Col xs={12} md={4}>
+                                <News imgUrl={data.imgUrl} title={data.title} />
+                            </Col>
+                        )
+                    })}
+                </Row>
+            </div>
         </div>
     )
 }

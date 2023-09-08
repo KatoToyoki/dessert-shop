@@ -4,6 +4,7 @@ import NavBar from '@/compoenents/NavBar'
 import About from './about'
 import Home from './home'
 import Goods from './goods'
+import News from '@/compoenents/News'
 
 
 

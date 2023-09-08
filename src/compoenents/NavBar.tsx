@@ -8,10 +8,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 import '@/compoenents/style.css';
+import '@/style/globals.css';
+
 
 const NavBar = () => {
     return (
-        <Navbar expand="lg" className="navbar space">
+        <Navbar expand="lg" className="navbar">
             <Navbar.Brand href="/home" style={{ width: '35px' }}>
                 <img src='images/logo.png' alt='logo' height={'100%'}></img>
             </Navbar.Brand>
