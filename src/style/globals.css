@@ -12,9 +12,11 @@
     --font: Noto Sans TC;
 }
 
-a {
-    text-decoration: none;
-    /* color: white; */
+p,
+h2,
+h3,
+h4 {
+    font-family: var(--font);
 }
 
 .center {
@@ -38,7 +40,7 @@ a {
 }
 
 .space {
-    padding: 7px 10% 7px 10%;
+    padding: 7px 15% 7px 15%;
 }
 
 .home_pic {
@@ -84,55 +86,97 @@ a {
     position: absolute;
 }
 
+#home_news_title {
+    font-style: normal;
+    color: var(--page_title);
+    padding: 4% 0% 4% 0%;
+}
+
+#home_news_bg {
+    background-color: #F5D8C0;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 235px;
+}
+
+#home_sign {
+    background: url('/images/bg.png');
+    text-align: center;
+    font-family: Noto Sans TC;
+    font-size: 88px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    padding: 5% 0% 5% 0%;
+}
+
+#home_sign_content {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url('/images/bg.png');
+    color: transparent;
+
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1.5px;
+}
+
 /* web */
 @media (min-width:600px) {
     #home_page_title {
         top: 30%;
-        left: 10%;
+        left: 11%;
     }
 
     #home_page_content {
         top: 50%;
-        left: 11%;
+        left: 12%;
     }
 
     #home_page_back1 {
         top: 52%;
-        left: 12%;
+        left: 13%;
         width: 30%;
     }
 
     #home_page_back2 {
         top: 55%;
-        left: 12%;
+        left: 13%;
         width: 15%;
     }
-}
 
+    #home_news_bg {
+        top: 100%;
+    }
+}
 
 /* phone */
 @media(max-width:920px) {
     #home_page_title {
-        top: 100px;
-        left: 10%;
+        top: 80px;
+        left: 11%;
         font-size: 72px;
     }
 
     #home_page_content {
-        top: 200px;
-        left: 11%;
+        top: 180px;
+        left: 12%;
         font-size: 18px;
     }
 
     #home_page_back1 {
-        top: 213px;
-        left: 13%;
+        top: 188px;
+        left: 14%;
         width: 60%;
     }
 
     #home_page_back2 {
-        top: 238px;
-        left: 13%;
+        top: 215px;
+        left: 14%;
         width: 30%;
+    }
+
+    #home_news_bg {
+        top: 50%;
     }
 }

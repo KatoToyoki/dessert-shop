@@ -9,15 +9,19 @@ const Home = () => {
     return (
         <div>
             <img src='images/home.png' className='home_pic'></img>
+
             <span id='home_page_title'>Pastel</span>
             <span id='home_page_content'>
-                Explore the magic, colorful delights,
-                <br />just a click away.
+                Explore the magic, colorful delights,<br />just a click away.
             </span>
             <div id='home_page_back1' />
             <div id='home_page_back2' />
 
+            <div id='home_news_bg' />
+
             <div className='space'>
+                <h2 id='home_news_title'>News</h2>
+
                 <Row>
                     {newsData.map((data) => {
                         return (
@@ -28,6 +32,8 @@ const Home = () => {
                     })}
                 </Row>
             </div>
+
+            <div id='home_sign' className='center'><div id='home_sign_content'>Sign up now</div></div>
         </div>
     )
 }
