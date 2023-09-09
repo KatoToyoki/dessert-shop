@@ -9,8 +9,7 @@
         "calories": "Approximately 180 calories per serving",
         "due_date": "Please relish this revitalizing delight within 3 days of purchase to enjoy its peak freshness and taste.",
         "ingredients": "Fresh spinach leaves, Ripe banana, Juicy pineapple chunks, Creamy Greek yogurt, Zesty lime juice, Silky almond milk, Honey for a hint of sweetness",
-        "imgUrl": "/images/goods1.png",
-        "detailUrl": "/goods/1"
+        "imgUrl": "/images/goods1.png"
     },
     {
         "id": 2,
@@ -22,8 +21,7 @@
         "calories": "Approximately 180 calories per serving",
         "due_date": "Please relish this revitalizing delight within 3 days of purchase to enjoy its peak freshness and taste.",
         "ingredients": "Fresh spinach leaves, Ripe banana, Juicy pineapple chunks, Creamy Greek yogurt, Zesty lime juice, Silky almond milk, Honey for a hint of sweetness",
-        "imgUrl": "/images/goods2.png",
-        "detailUrl": "/goods/1"
+        "imgUrl": "/images/goods2.png"
     },
     {
         "id": 3,
@@ -35,7 +33,6 @@
         "calories": "Approximately 180 calories per serving",
         "due_date": "Please relish this revitalizing delight within 3 days of purchase to enjoy its peak freshness and taste.",
         "ingredients": "Fresh spinach leaves, Ripe banana, Juicy pineapple chunks, Creamy Greek yogurt, Zesty lime juice, Silky almond milk, Honey for a hint of sweetness",
-        "imgUrl": "/images/goods3.png",
-        "detailUrl": "/goods/1"
+        "imgUrl": "/images/goods3.png"
     }
 ]

@@ -10,13 +10,15 @@ interface Props {
 }
 
 const PButton = ({ text, url }: Props) => {
+    let button = (
+        <Button className="news_button button2_bg">
+            &nbsp; {text} &nbsp;
+        </Button>
+    )
+
     return (
-        <div>
-            <Link href={url}>
-                <Button className="news_button">
-                    &nbsp; {text} &nbsp;
-                </Button>
-            </Link>
+        <div className='center'>
+            {url ? <Link href={url}>{button}</Link> : button}
         </div >
     )
 }

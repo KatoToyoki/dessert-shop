@@ -24,6 +24,8 @@
     padding: 1% 0% 1% 0%;
     font-size: 12px;
     font-family: var(--font);
+    position: relative;
+    z-index: 99;
 }
 
 .new_pic_c {
@@ -96,6 +98,7 @@
     background: var(--white, #FFF);
     box-shadow: 3px 5px 10px 0px rgba(0, 0, 0, 0.25);
     padding: 9% 8% 9% 8%;
+    margin: 15px 0 15px 0;
 }
 
 .goods_pic {
@@ -109,4 +112,15 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+}
+
+.button2_bg {
+    background-color: var(--button2);
+    border-color: var(--button2);
+}
+
+.button2_bg:hover {
+    background-color: var(--title2);
+    border-color: var(--title2);
+    transition-duration: .5s;
 }
