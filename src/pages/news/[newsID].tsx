@@ -41,7 +41,7 @@ const EachNews = () => {
                         </Col>
                         <Col xs={12} md={8}>
                             <h4 className='title2'>{data.title}</h4> <br />
-                            <span className='left'>{data.date}</span>
+                            <span className='right'>{data.date}</span>
                             <hr /><br />
                             <p>{data.smallTitle}</p>
                             <p>{data.content}</p>

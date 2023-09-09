@@ -22,10 +22,6 @@ const News = ({ id, imgUrl, title, newsUrl }: Props) => {
             </div>
 
             <div className="center">
-                <a href={newsUrl}>
-
-
-                </a>
                 <Link href={`/news/${id}`}>
                     <Button className="news_button">
                         &nbsp; more &nbsp;

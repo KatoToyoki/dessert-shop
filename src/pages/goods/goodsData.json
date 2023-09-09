@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "price": 100,
+        "name": "Leafy Green Serenity Smoothie",
+        "introduction": " Indulge in a burst of revitalizing flavors with our Green Bliss Smoothie, a true epitome of health and taste. Each sip is a journey through a medley of vibrant ingredients carefully blended to perfection. Topped with a fresh green leaf garnish, this smoothie not only tantalizes your taste buds but also brings a touch of nature to your beverage experience.",
+        "sub_title": "Sip with Confidence:",
+        "sub_content": "Crafted with your well-being in mind, our Green Bliss Smoothie adheres to the highest food safety standards. We source only the finest ingredients and follow stringent quality control measures to ensure each sip is a blend of nourishment and flavor.",
+        "calories": "Approximately 180 calories per serving",
+        "due_date": "Please relish this revitalizing delight within 3 days of purchase to enjoy its peak freshness and taste.",
+        "ingredients": "Fresh spinach leaves, Ripe banana, Juicy pineapple chunks, Creamy Greek yogurt, Zesty lime juice, Silky almond milk, Honey for a hint of sweetness",
+        "imgUrl": "/images/goods1.png",
+        "detailUrl": "/goods/1"
+    },
+    {
+        "id": 2,
+        "price": 100,
+        "name": "Fusion of Freshness and Flavor",
+        "introduction": " Indulge in a burst of revitalizing flavors with our Green Bliss Smoothie, a true epitome of health and taste. Each sip is a journey through a medley of vibrant ingredients carefully blended to perfection. Topped with a fresh green leaf garnish, this smoothie not only tantalizes your taste buds but also brings a touch of nature to your beverage experience.",
+        "sub_title": "Sip with Confidence:",
+        "sub_content": "Crafted with your well-being in mind, our Green Bliss Smoothie adheres to the highest food safety standards. We source only the finest ingredients and follow stringent quality control measures to ensure each sip is a blend of nourishment and flavor.",
+        "calories": "Approximately 180 calories per serving",
+        "due_date": "Please relish this revitalizing delight within 3 days of purchase to enjoy its peak freshness and taste.",
+        "ingredients": "Fresh spinach leaves, Ripe banana, Juicy pineapple chunks, Creamy Greek yogurt, Zesty lime juice, Silky almond milk, Honey for a hint of sweetness",
+        "imgUrl": "/images/goods2.png",
+        "detailUrl": "/goods/1"
+    },
+    {
+        "id": 3,
+        "price": 100,
+        "name": "A Tranquil Fusion of Freshness and Flavor",
+        "introduction": " Indulge in a burst of revitalizing flavors with our Green Bliss Smoothie, a true epitome of health and taste. Each sip is a journey through a medley of vibrant ingredients carefully blended to perfection. Topped with a fresh green leaf garnish, this smoothie not only tantalizes your taste buds but also brings a touch of nature to your beverage experience.",
+        "sub_title": "Sip with Confidence:",
+        "sub_content": "Crafted with your well-being in mind, our Green Bliss Smoothie adheres to the highest food safety standards. We source only the finest ingredients and follow stringent quality control measures to ensure each sip is a blend of nourishment and flavor.",
+        "calories": "Approximately 180 calories per serving",
+        "due_date": "Please relish this revitalizing delight within 3 days of purchase to enjoy its peak freshness and taste.",
+        "ingredients": "Fresh spinach leaves, Ripe banana, Juicy pineapple chunks, Creamy Greek yogurt, Zesty lime juice, Silky almond milk, Honey for a hint of sweetness",
+        "imgUrl": "/images/goods3.png",
+        "detailUrl": "/goods/1"
+    }
+]
