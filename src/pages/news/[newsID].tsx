@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Col, Row } from "react-bootstrap"
 
 import newsData from '@/pages/home/newsData.json'
+import NotFound from '@/compoenents/NotFound';
 
 interface Props {
     id: number | null;
@@ -34,8 +35,6 @@ const EachNews = () => {
         return (
             <div id='news' className='space'>
                 <div id='news_bg'>
-                    {/* {JSON.stringify(router.query)} */}
-                    {/* {id} */}
                     <Row>
                         <Col xs={12} md={4} >
                             <img src={data.imgUrl} />
@@ -54,12 +53,9 @@ const EachNews = () => {
     }
     else {
         return (
-            <div id='news_bg'>
-                404
-            </div>
+            <NotFound />
         )
     }
-
 }
 
 export default EachNews;

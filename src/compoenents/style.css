@@ -53,3 +53,14 @@
     background-color: var(--title);
     border-color: var(--title);
 }
+
+.not_found {
+    background-image: url('/images/bg.png');
+    padding: 24% 28% 28% 28%;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    color: white;
+    min-height: 1000px;
+}

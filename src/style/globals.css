@@ -154,6 +154,34 @@ h4 {
     box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
+
+#about_bg {
+    background: url('/images/aboutBG.jpg') fixed 100% / 100% auto repeat, lightgray;
+}
+
+#about {
+    padding: 10% 30% 10% 30%;
+}
+
+#about_title {
+    color: white;
+    text-align: center;
+    font-family: Noto Sans TC;
+    font-size: 200px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#about_content {
+    color: white;
+    font-family: Noto Sans TC;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 /* web */
 @media (min-width:600px) {
     #home_page_title {
@@ -181,8 +209,8 @@ h4 {
     #home_news_bg {
         top: 100%;
     }
-}
 
+}
 
 /* phone */
 @media(max-width:920px) {
@@ -213,4 +241,9 @@ h4 {
     #home_news_bg {
         top: 50%;
     }
+
+    #about_title {
+        font-size: 100px;
+    }
+
 }
