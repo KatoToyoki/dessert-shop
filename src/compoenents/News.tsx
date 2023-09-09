@@ -3,13 +3,16 @@ import '@/compoenents/style.css';
 import '@/style/globals.css';
 
 import { Button } from "react-bootstrap"
+import Link from 'next/link';
 
 interface Props {
+    id: number;
     imgUrl: string;
     title: string;
+    newsUrl: string;
 }
 
-const News = ({ imgUrl, title }: Props) => {
+const News = ({ id, imgUrl, title, newsUrl }: Props) => {
     return (
         <div>
             <img src={imgUrl} className='new_pic_c' />
@@ -19,11 +22,15 @@ const News = ({ imgUrl, title }: Props) => {
             </div>
 
             <div className="center">
-                <a href={"/result"} >
+                <a href={newsUrl}>
+
+
+                </a>
+                <Link href={`/news/${id}`}>
                     <Button className="news_button">
                         &nbsp; more &nbsp;
                     </Button>
-                </a>
+                </Link>
             </div>
             <br />
         </div>
