@@ -11,7 +11,7 @@
 .navbar {
     background-color: var(--nav-bar-color);
     position: fixed;
-    z-index: 999;
+    z-index: 3;
     width: 100%;
     padding: 7px 10% 7px 10%;
 }
@@ -25,7 +25,7 @@
     font-size: 12px;
     font-family: var(--font);
     position: relative;
-    z-index: 99;
+    z-index: 10;
 }
 
 .new_pic_c {
@@ -147,4 +147,27 @@
 
 .trash:hover {
     opacity: 1;
+}
+
+.search_not_found {
+    color: white;
+    text-align: center;
+    font-family: Noto Sans TC;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.before_user {
+    position: relative;
+    z-index: 5;
+}
+
+.inputBox {
+    border-radius: 20px;
+    border: 1px solid #BCBCBC;
+    background: #F3F3F3;
+    padding: 5px 10px 5px 20px;
+    width: 100%;
 }

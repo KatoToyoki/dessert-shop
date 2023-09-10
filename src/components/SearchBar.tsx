@@ -14,6 +14,7 @@ const SearchBar = () => {
                 className="search"
             />
             <FontAwesomeIcon icon={faSearch} className="search_icon" />
+
         </div>
     )
 }
