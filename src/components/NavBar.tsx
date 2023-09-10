@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-import '@/compoenents/style.css';
+import '@/components/style.css';
 import '@/style/globals.css';
 
 

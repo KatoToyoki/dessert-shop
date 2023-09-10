@@ -1,7 +1,7 @@
 import React from 'react'
 import '@/style/globals.css';
 import { Col, Row } from "react-bootstrap"
-import News from '@/compoenents/News';
+import News from '@/components/News';
 
 import newsData from '@/pages/home/newsData.json'
 

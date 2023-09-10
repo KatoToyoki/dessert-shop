@@ -64,7 +64,7 @@
     font-weight: 900;
     line-height: normal;
     color: white;
-    min-height: 1000px;
+    /* min-height: 1000px; */
 }
 
 .search {
@@ -123,4 +123,28 @@
     background-color: var(--title2);
     border-color: var(--title2);
     transition-duration: .5s;
+}
+
+.cart_item {
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(10px);
+    padding: 2% 10% 2% 10%;
+}
+
+.cart_font {
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.trash {
+    color: black;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.trash:hover {
+    opacity: 1;
 }

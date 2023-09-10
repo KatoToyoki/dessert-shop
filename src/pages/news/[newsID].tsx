@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { Col, Row } from "react-bootstrap"
 
 import newsData from '@/pages/home/newsData.json'
-import NotFound from '@/compoenents/NotFound';
+import NotFound from '@/components/NotFound';
 
 interface Props {
     id: number | null;
@@ -19,22 +19,19 @@ const EachNews = () => {
     const router = useRouter();
     const { newsID } = router.query;
     const id = Array.isArray(newsID) ? newsID[0] : newsID;
-    let isNewsExist: boolean = false;
-    let data: Props = { id: null, imgUrl: "", title: "", date: "", smallTitle: "", content: "" };
+    const data: Props = { id: null, imgUrl: "", title: "", date: "", smallTitle: "", content: "" };
+    const foundNews = newsData.find((news) => news.id.toString() === id);
 
-    for (var i = 0; i < newsData.length; i++) {
-        let news = newsData[i];
-        if (news.id.toString() == id) {
-            isNewsExist = true;
-            data = newsData[i];
-            break;
-        }
+
+    if (foundNews) {
+        Object.assign(data, foundNews);
     }
+    const isNewsExist = !!foundNews;
 
     if (isNewsExist) {
         return (
-            <div id='news' className='space'>
-                <div id='news_bg'>
+            <div id='news' className='space '>
+                <div id='news_bg' className='flex-wrapper'>
                     <Row>
                         <Col xs={12} md={4} >
                             <img src={data.imgUrl} />

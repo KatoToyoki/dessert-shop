@@ -4,8 +4,8 @@ import { useRouter } from 'next/router';
 import { Col, Row } from "react-bootstrap"
 
 import goodsData from '@/pages/goods/goodsData.json';
-import NotFound from '@/compoenents/NotFound';
-import PButton from '@/compoenents/PButton';
+import NotFound from '@/components/NotFound';
+import PButton from '@/components/PButton';
 
 
 interface Props {
@@ -25,17 +25,14 @@ const EachGoods = () => {
     const router = useRouter();
     const { goodsID } = router.query;
     const id = Array.isArray(goodsID) ? goodsID[0] : goodsID;
-    let isGoodsExist: boolean = false;
     let data: Props = { id: null, price: 0, name: "", introduction: "", sub_title: "", sub_content: "", calories: "", due_date: "", ingredients: "", imgUrl: "" }
+    const foundGoods = goodsData.find((goods) => goods.id.toString() === id);
 
-    for (var i = 0; i < goodsData.length; i++) {
-        let news = goodsData[i];
-        if (news.id.toString() == id) {
-            isGoodsExist = true;
-            data = goodsData[i];
-            break;
-        }
+    if (foundGoods) {
+        Object.assign(data, foundGoods);
     }
+
+    const isGoodsExist = !!foundGoods;
 
     const [quality, setQuality] = useState(1);
     const handleAdd = () => setQuality(quality + 1);
@@ -43,10 +40,10 @@ const EachGoods = () => {
 
     if (isGoodsExist) {
         return (
-            <div className='bg goods_item_p'>
+            <div className='bg goods_item_p flex-wrapper'>
                 <Row>
                     <Col xs={12} md={5} className='goods_bgW'>
-                        <div className='goods_img_container'>
+                        <div className='goods_img_container flex-wrapper'>
                             <img src={data.imgUrl} className='goods_pic' />
 
                             <br />
