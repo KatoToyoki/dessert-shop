@@ -27,7 +27,6 @@ const CartItem = ({ item_id, quantity, updateTotal, removeItem, isCart }: Input)
         data.name = matchingGood.name;
         data.imgUrl = matchingGood.imgUrl;
         data.subtotal = matchingGood.price * data.quantity;
-
     }
 
     if (updateTotal) {

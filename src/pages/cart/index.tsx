@@ -4,32 +4,21 @@ import BoughtPage from '@/components/BoughtPage';
 interface Props {
     item_id: number;
     quantity: number;
+    subtotal: number;
 }
 
 const Cart = () => {
-    let data: Props = { item_id: 0, quantity: 0 };
-
     let initialData: Props[] = [];
     for (let i = 0; i < 3; i++) {
         const newData: Props = {
             item_id: 2 + i,
-            quantity: 3 + 3 * i
+            quantity: 3 + 3 * i,
+            subtotal: 0
         };
         initialData.push(newData);
     }
 
     const [cartContainer, setCartContainer] = useState<Props[]>(initialData);
-
-    const removeItem = (id: number) => {
-        setCartContainer((prevCartContainer) => {
-            const updateCartContainer = prevCartContainer.filter(
-                (item) => item.item_id !== id
-            );
-            return updateCartContainer;
-        })
-
-
-    }
 
     const [total, setTotal] = useState<number[]>([]);
     const [total_count, setTotalCount] = useState(0);
@@ -46,6 +35,27 @@ const Cart = () => {
             setTotal((prevTotal) => [...prevTotal, id, subtotal]);
             setTotalCount((prevTotal) => prevTotal + subtotal);
         }
+
+        for (let i = 0; i < cartContainer.length; i++) {
+            if (cartContainer[i].item_id === id) {
+                cartContainer[i].subtotal = subtotal;
+                break;
+            }
+        }
+    }
+
+    const removeItem = (id: number) => {
+        setCartContainer((prevCartContainer) => {
+            const item = prevCartContainer.filter(
+                (item) => item.item_id === id
+            )
+            setTotalCount((prevTotal) => prevTotal - item[0].subtotal);
+
+            const updateCartContainer = prevCartContainer.filter(
+                (item) => item.item_id !== id
+            );
+            return updateCartContainer;
+        })
     }
 
     return (
