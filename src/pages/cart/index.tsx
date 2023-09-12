@@ -1,9 +1,27 @@
 import CartItem from '@/components/CartItem';
 import React, { useState } from 'react'
-import boughtData from '@/pages/cart/boughtData.json';
 import PButton from '@/components/PButton';
 
+interface Props {
+    item_id: number;
+    quantity: number;
+}
+
 const Cart = () => {
+    let data: Props = { item_id: 0, quantity: 0 };
+
+    let initialData: Props[] = [];
+    for (let i = 0; i < 3; i++) {
+        const newData: Props = {
+            item_id: 2 + i,
+            quantity: 3 + 3 * i
+        };
+        initialData.push(newData);
+    }
+
+    const [cartContainer, setCartContainer] = useState<Props[]>(initialData);
+
+
     const [total, setTotal] = useState<number[]>([]);
     const [total_count, setTotalCount] = useState(0);
 
@@ -23,7 +41,7 @@ const Cart = () => {
     return (
         <div className='bg flex-wrapper'>
             <span className='titleWhite'>Cart</span>
-            {boughtData.map((data) => {
+            {cartContainer.map((data) => {
                 return (
                     <CartItem item_id={data.item_id} quantity={data.quantity} updateTotal={updateTotal} />
                 )

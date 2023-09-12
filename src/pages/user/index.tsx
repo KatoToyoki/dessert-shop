@@ -1,14 +1,14 @@
-import BeforeUser from '@/components/BeforeUser'
-import SearchNotFound from '@/components/SearchNotFound'
 import React from 'react'
 
 import beforeData from '@/pages/user/before.json'
-
+import BeforeUser from '@/components/BeforeUser'
+import SearchNotFound from '@/components/SearchNotFound'
 
 import { Col, Row } from "react-bootstrap"
 import { faUser, faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Info from '@/components/Info'
+import History from '@/components/History'
 
 const User = () => {
     return (
@@ -23,7 +23,7 @@ const User = () => {
                 <Col xs={12} md={12}>
                     <img src='/images/user.jpg' />
                 </Col>
-                <Col xs={12} md={4}>
+                <Col xs={12} md={3}>
                     <Row className='userIcon'>
                         <Col xs={12} className='center'>
                             <img src='/images/head.jpg' className='userImg' />
@@ -40,8 +40,9 @@ const User = () => {
                         <FontAwesomeIcon icon={faFile} className='white_word' /> &nbsp; <span className='white_word'>Order history</span>
                     </div>
                 </Col>
-                <Col xs={12} md={8}>
-                    <Info />
+                <Col xs={12} md={9}>
+                    {/* <Info /> */}
+                    <History />
                 </Col>
             </Row>
         </div>

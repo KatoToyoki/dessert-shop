@@ -171,3 +171,32 @@
     padding: 5px 10px 5px 20px;
     width: 100%;
 }
+
+.info_text {
+    font-family: Noto Sans TC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.info_title {
+    color: var(--title2);
+    font-family: Noto Sans TC;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.info {
+    padding: 6% 10% 6% 10%;
+}
+
+.history_container {
+    border-radius: 20px;
+    border: 1px solid #CCC;
+    background: var(--white, #FFF);
+    padding: 10%;
+    margin: 5% 0% 5% 0%;
+}
