@@ -6,7 +6,7 @@ import historyData from '@/pages/cart/boughtData.json'
 
 const History = () => {
     return (
-        <div style={{ padding: '5%' }}>
+        <div>
             <div className='info_title'>Order history</div>
             <hr style={{ opacity: '1' }} /><br />
 

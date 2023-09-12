@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Col, Row } from "react-bootstrap"
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,7 +8,9 @@ import goodsData from '@/pages/goods/goodsData.json';
 interface Input {
     item_id: number,
     quantity: number,
-    updateTotal: (subtotal: number, id: number) => void;
+    updateTotal?: (subtotal: number, id: number) => void;
+    removeItem?: (id: number) => void;
+    isCart: boolean;
 }
 
 interface Props extends Input {
@@ -18,8 +19,8 @@ interface Props extends Input {
     subtotal: number
 }
 
-const CartItem = ({ item_id, quantity, updateTotal }: Input) => {
-    let data: Props = { item_id, quantity, updateTotal, name: "", imgUrl: "", subtotal: 0 };
+const CartItem = ({ item_id, quantity, updateTotal, removeItem, isCart }: Input) => {
+    let data: Props = { item_id, quantity, updateTotal, name: "", imgUrl: "", subtotal: 0, isCart: false };
     const matchingGood = goodsData.find((goods) => goods.id === data.item_id);
 
     if (matchingGood) {
@@ -29,7 +30,9 @@ const CartItem = ({ item_id, quantity, updateTotal }: Input) => {
 
     }
 
-    updateTotal(data.subtotal, data.item_id);
+    if (updateTotal) {
+        updateTotal(data.subtotal, data.item_id);
+    }
 
     return (
         <div className='cart_item' style={{ margin: '2% 0 2% 0' }}>
@@ -51,7 +54,9 @@ const CartItem = ({ item_id, quantity, updateTotal }: Input) => {
                 </Col>
 
                 <Col xs={4} md={2} className='right'>
-                    <FontAwesomeIcon icon={faTrash} className='trash' />
+                    {isCart && removeItem && (
+                        <FontAwesomeIcon icon={faTrash} className='trash' onClick={() => removeItem(data.item_id)} />
+                    )}
                 </Col>
             </Row>
         </div>

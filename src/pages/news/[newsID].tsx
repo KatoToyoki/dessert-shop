@@ -2,7 +2,6 @@ import React from 'react'
 import '@/style/globals.css';
 import { useRouter } from 'next/router';
 import { Col, Row } from "react-bootstrap"
-
 import newsData from '@/pages/home/newsData.json'
 import NotFound from '@/components/NotFound';
 
@@ -21,7 +20,6 @@ const EachNews = () => {
     const id = Array.isArray(newsID) ? newsID[0] : newsID;
     const data: Props = { id: null, imgUrl: "", title: "", date: "", smallTitle: "", content: "" };
     const foundNews = newsData.find((news) => news.id.toString() === id);
-
 
     if (foundNews) {
         Object.assign(data, foundNews);

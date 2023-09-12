@@ -7,9 +7,10 @@ import { Button } from "react-bootstrap"
 interface Props {
     text: string;
     url: string;
+    removeItem?: (id: number) => void;
 }
 
-const PButton = ({ text, url }: Props) => {
+const PButton = ({ text, url, removeItem }: Props) => {
     let button = (
         <Button className="news_button button2_bg">
             &nbsp; {text} &nbsp;

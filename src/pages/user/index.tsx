@@ -23,7 +23,7 @@ const User = () => {
                 <Col xs={12} md={12}>
                     <img src='/images/user.jpg' />
                 </Col>
-                <Col xs={12} md={3}>
+                <Col xs={12} md={2}>
                     <Row className='userIcon'>
                         <Col xs={12} className='center'>
                             <img src='/images/head.jpg' className='userImg' />
@@ -40,7 +40,7 @@ const User = () => {
                         <FontAwesomeIcon icon={faFile} className='white_word' /> &nbsp; <span className='white_word'>Order history</span>
                     </div>
                 </Col>
-                <Col xs={12} md={9}>
+                <Col xs={12} md={10} style={{ padding: '6% 10% 6% 10%' }}>
                     {/* <Info /> */}
                     <History />
                 </Col>

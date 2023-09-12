@@ -4,7 +4,7 @@ import InfoItem from './InfoItem';
 
 const Info = () => {
     return (
-        <div className='info'>
+        <div>
             <div className='info_title'>Personal info</div>
             <hr style={{ opacity: '1' }} />
             <InfoItem text="Name" isMore={false} />

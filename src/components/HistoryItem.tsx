@@ -1,5 +1,4 @@
 import React from 'react'
-import { Col, Row } from "react-bootstrap"
 import PButton from './PButton'
 import historyData from '@/pages/cart/boughtData.json'
 import goodsData from '@/pages/goods/goodsData.json';
@@ -22,13 +21,15 @@ const HistoryItem = ({ id }: { id: number }) => {
         }, 0);
     }
 
+    const url = `/user/history/${id}`
+
     return (
         <div className='history_container'>
             <img src={firstItem?.imgUrl} />
             <div>{record?.items.length} items</div>
             <div>${Total}</div>
             <div className='right'>{record?.time}</div>
-            <PButton text='more' url='' />
+            <PButton text='more' url={url} />
         </div>
     )
 }

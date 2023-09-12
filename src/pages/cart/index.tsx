@@ -1,6 +1,5 @@
-import CartItem from '@/components/CartItem';
 import React, { useState } from 'react'
-import PButton from '@/components/PButton';
+import BoughtPage from '@/components/BoughtPage';
 
 interface Props {
     item_id: number;
@@ -21,6 +20,16 @@ const Cart = () => {
 
     const [cartContainer, setCartContainer] = useState<Props[]>(initialData);
 
+    const removeItem = (id: number) => {
+        setCartContainer((prevCartContainer) => {
+            const updateCartContainer = prevCartContainer.filter(
+                (item) => item.item_id !== id
+            );
+            return updateCartContainer;
+        })
+
+
+    }
 
     const [total, setTotal] = useState<number[]>([]);
     const [total_count, setTotalCount] = useState(0);
@@ -32,6 +41,7 @@ const Cart = () => {
                 isExist = true;
             }
         }
+
         if (!isExist) {
             setTotal((prevTotal) => [...prevTotal, id, subtotal]);
             setTotalCount((prevTotal) => prevTotal + subtotal);
@@ -39,17 +49,7 @@ const Cart = () => {
     }
 
     return (
-        <div className='bg flex-wrapper'>
-            <span className='titleWhite'>Cart</span>
-            {cartContainer.map((data) => {
-                return (
-                    <CartItem item_id={data.item_id} quantity={data.quantity} updateTotal={updateTotal} />
-                )
-            })}
-            <hr className='white_bg' />
-            <div className='center title2'>Total : ${total_count}</div> <br />
-            <PButton text='Submit' url='' />
-        </div>
+        <BoughtPage title='Cart' cartContainer={cartContainer} total={total_count} updateTotal={updateTotal} removeItem={removeItem} isCart={true} isButtonNeeded={true} />
     )
 }
 
