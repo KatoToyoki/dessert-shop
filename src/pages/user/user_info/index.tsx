@@ -34,10 +34,8 @@ const UserInfo = () => {
                     </div>
 
                 </Col>
-                <Col xs={12} md={10} style={{ padding: '6% 10% 6% 10%' }} className='center'>
-                    <h2>
-                        Welcome, John Jonathan.
-                    </h2>
+                <Col xs={12} md={10} style={{ padding: '6% 10% 6% 10%' }}>
+                    <Info />
                 </Col>
             </Row>
         </div>

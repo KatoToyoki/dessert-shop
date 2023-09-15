@@ -85,7 +85,6 @@ p {
     line-height: normal;
     position: absolute;
     z-index: 2;
-
 }
 
 #home_page_content {
@@ -96,7 +95,7 @@ p {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    z-index: 99;
+    z-index: 2;
 }
 
 #home_page_back1 {
@@ -424,4 +423,8 @@ p {
         top: -50px;
     }
 
+}
+
+.none {
+    text-decoration: none;
 }
