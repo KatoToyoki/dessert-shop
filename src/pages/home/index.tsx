@@ -19,7 +19,7 @@ const Home = () => {
 
             <div id='home_news_bg' />
 
-            <div className='space'>
+            <div style={{ padding: '1% 15% 1% 15% ' }}>
                 <h2 id='home_news_title'>News</h2>
 
                 <Row>

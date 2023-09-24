@@ -5,10 +5,12 @@ import SearchBar from '@/components/SearchBar';
 import GoodItem from '@/components/GoodItem';
 
 import goodsData from '@/pages/goods/goodsData.json'
+import Link from 'next/link';
+import SearchNotFound from '@/components/SearchNotFound';
 
 const Goods = () => {
     return (
-        <div className='bg'>
+        <div className='pureBG' style={{ padding: '10%' }}>
             <Row>
                 <Col xs={12} md={3}>
                     <span className='titleWhite'>Goods</span>
@@ -18,7 +20,7 @@ const Goods = () => {
                     <SearchBar />
                 </Col>
             </Row>
-            <div className='slice_space'>
+            <div style={{ padding: '2% 7% 2% 7%' }}>
                 <Row>
                     {goodsData.map((data) => {
                         return (

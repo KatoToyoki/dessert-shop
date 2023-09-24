@@ -14,8 +14,8 @@ const GoodItem = ({ id, name, imgUrl }: Props) => {
 
     return (
         <div className='goods_item'>
-            <img src={imgUrl} className='goods_pic' />
-            <div className='slice_space goods_title_c'>
+            <img src={imgUrl} style={{ borderRadius: '0 0 30px 0' }} />
+            <div className='goods_title_c' style={{ padding: '2% 7% 2% 7% ' }}>
                 {name}
             </div>
             <div className='center'>

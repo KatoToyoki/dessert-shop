@@ -22,7 +22,7 @@ const BeforeUser = ({ data }: Data) => {
             <div className='center flex-wrapper before_user'>
                 <Row style={{ backgroundColor: 'white' }}>
                     <Col xs={12} md={6}>
-                        <img src={data?.imgUrl} className='before_img' />
+                        <img src={data?.imgUrl} style={{ height: '100%' }} />
                     </Col>
                     <Col xs={12} md={6} style={{ padding: '10% 10% 10% 10%' }}>
                         <div className='before_title'>{data?.title}</div>

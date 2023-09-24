@@ -9,15 +9,14 @@ interface Props {
     id: number;
     imgUrl: string;
     title: string;
-    newsUrl: string;
 }
 
-const News = ({ id, imgUrl, title, newsUrl }: Props) => {
+const News = ({ id, imgUrl, title }: Props) => {
     return (
         <div>
             <img src={imgUrl} className='new_pic_c' />
 
-            <div className='space'>
+            <div style={{ padding: '1% 15% 1% 15%' }}>
                 <span className='news_title_c '>{title}</span>
             </div>
 

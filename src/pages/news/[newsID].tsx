@@ -28,7 +28,7 @@ const EachNews = () => {
 
     if (isNewsExist) {
         return (
-            <div id='news' className='space '>
+            <div className='pureBG' style={{ padding: '10% 10% 0% 10%' }}>
                 <div id='news_bg' className='flex-wrapper'>
                     <Row>
                         <Col xs={12} md={4} >

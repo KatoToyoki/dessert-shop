@@ -1,28 +1,10 @@
 import React from 'react'
 import '@/style/globals.css';
-import { Col, Row } from "react-bootstrap"
 
 const About = () => {
-    let images = [];
-    for (let i = 0; i < 6; i++) {
-        let imageUrl = `/images/about${i + 1}.jpg`;
-        let divStyle = {
-            background: `url(${imageUrl}) center/cover no-repeat`,
-            width: '100%',
-            paddingBottom: '100%',
-            borderRadius: '30px 30px 0 0',
-        };
-
-        images.push(
-            <Col xs={2} key={i} >
-                <div className="col-xs-2" key={i} style={divStyle}></div>
-            </Col>
-        )
-    }
-
     return (
         <div id='about_bg'>
-            <div id='about'>
+            <div style={{ padding: '10% 30% 10% 30% ' }}>
                 <span id='about_title' className='center'>
                     About
                 </span>
@@ -44,9 +26,8 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <Row>
-                {images}
-            </Row>
+
+            <img src='/images/aboutItem.png' style={{ width: '100%' }} />
         </div>
     )
 }

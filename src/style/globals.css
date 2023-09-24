@@ -66,10 +66,6 @@ p {
     opacity: 1;
 }
 
-.space {
-    padding: 7px 15% 7px 15%;
-}
-
 .home_pic {
     width: 100%;
     position: relative;
@@ -147,11 +143,6 @@ p {
     -webkit-text-stroke-width: 1.5px;
 }
 
-#news {
-    background-image: url('/images/bg.png');
-    padding-top: 10%;
-}
-
 #news_bg {
     background-color: white;
     padding: 10% 7% 10% 7%;
@@ -159,13 +150,8 @@ p {
     box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
-
 #about_bg {
     background: url('/images/aboutBG.jpg') fixed 100% / 100% auto repeat, lightgray;
-}
-
-#about {
-    padding: 10% 30% 10% 30%;
 }
 
 #about_title {
@@ -192,8 +178,8 @@ p {
     padding: 10% 10% 10% 10%;
 }
 
-.slice_space {
-    padding: 2% 7% 2% 7%;
+.pureBG {
+    background: url('/images/bg.png') fixed;
 }
 
 .titleWhite {
@@ -206,24 +192,12 @@ p {
     line-height: normal;
 }
 
-.goods_item_p {
-    padding: 55px 15% 0 15%;
-}
-
 .goods_bgW {
     background: var(--white, #FFF);
     box-shadow: 6px 4px 10px 2px rgba(0, 0, 0, 0.25);
 }
 
-.goods_img_container {
-    padding: 0 8% 10% 8%;
-}
-
-.goods_contents {
-    padding: 7% 10% 10% 10%;
-}
-
-#goods_name {
+.goods_name {
     color: var(--title2);
     font-family: Noto Sans TC;
     font-size: 24px;
@@ -239,10 +213,6 @@ p {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-}
-
-.test {
-    background-color: aqua;
 }
 
 .quantity_box {
@@ -286,10 +256,6 @@ p {
     line-height: normal;
 }
 
-.before_img {
-    height: 100%;
-}
-
 .before_subcontent {
     color: #929292;
     font-family: Noto Sans TC;
@@ -308,6 +274,11 @@ p {
     flex-shrink: 0;
 }
 
+/* for users */
+.userBG {
+    padding-top: 20px;
+}
+
 .userIcon {
     position: relative;
     z-index: 1;
@@ -319,10 +290,6 @@ p {
     border-radius: 100%;
     box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.25);
     margin: 0% 0% 5% 0%;
-}
-
-.userbg {
-    padding-top: 20px;
 }
 
 .userButton {
@@ -339,14 +306,12 @@ p {
     transition-duration: .5s;
 }
 
-
 /* web */
 @media (min-width:600px) {
     #home_page_title {
         left: 11%;
         top: 30%;
     }
-
 
     #home_page_content {
         top: 50%;
@@ -374,11 +339,14 @@ p {
         flex-direction: column;
         justify-content: flex-start;
     }
-
 }
 
 /* phone */
 @media(max-width:920px) {
+    .home_pic {
+        padding-top: 58px;
+    }
+
     #home_page_title {
         top: 80px;
         left: 11%;
@@ -415,14 +383,13 @@ p {
         padding-top: 20%;
     }
 
-    .userbg {
+    .userBG {
         padding-top: 10%;
     }
 
     .userIcon {
         top: -50px;
     }
-
 }
 
 .none {

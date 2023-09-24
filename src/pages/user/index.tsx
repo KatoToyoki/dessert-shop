@@ -2,12 +2,11 @@ import React from 'react'
 import { Col, Row } from "react-bootstrap"
 import { faUser, faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Info from '@/components/Info'
 import Link from 'next/link';
 
 const UserInfo = () => {
     return (
-        <div className='flex-wrapper userbg'>
+        <div className='flex-wrapper userBG'>
             <Row>
                 <Col xs={12} md={12}>
                     <img src='/images/user.jpg' />

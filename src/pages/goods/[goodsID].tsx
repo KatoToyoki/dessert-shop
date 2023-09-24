@@ -22,10 +22,13 @@ interface Props {
 }
 
 const EachGoods = () => {
+    // to get the goods' id from router
     const router = useRouter();
     const { goodsID } = router.query;
     const id = Array.isArray(goodsID) ? goodsID[0] : goodsID;
     let data: Props = { id: null, price: 0, name: "", introduction: "", sub_title: "", sub_content: "", calories: "", due_date: "", ingredients: "", imgUrl: "" }
+
+    // to find the goods information by id
     const foundGoods = goodsData.find((goods) => goods.id.toString() === id);
 
     if (foundGoods) {
@@ -40,11 +43,11 @@ const EachGoods = () => {
 
     if (isGoodsExist) {
         return (
-            <div className='bg goods_item_p flex-wrapper'>
+            <div className='flex-wrapper pureBG' style={{ padding: '55px 15% 0 15%' }}>
                 <Row>
                     <Col xs={12} md={5} className='goods_bgW'>
-                        <div className='goods_img_container flex-wrapper'>
-                            <img src={data.imgUrl} className='goods_pic' />
+                        <div className='flex-wrapper' style={{ padding: '0 8% 10% 8%' }}>
+                            <img src={data.imgUrl} style={{ borderRadius: '0 0 30px 0' }} />
 
                             <br />
 
@@ -90,8 +93,8 @@ const EachGoods = () => {
 
                     </Col>
                     <Col xs={12} md={7}>
-                        <div className='goods_contents'>
-                            <div id='goods_name'>{data.name}</div>
+                        <div style={{ padding: '7% 10% 10% 10%' }}>
+                            <div className='goods_name'>{data.name}</div>
                             <p className='goods_texts'>
                                 {data.introduction}
                             </p>

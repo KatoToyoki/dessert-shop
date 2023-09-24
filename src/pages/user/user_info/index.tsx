@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const UserInfo = () => {
     return (
-        <div className='flex-wrapper userbg'>
+        <div className='flex-wrapper userBG'>
             <Row>
                 <Col xs={12} md={12}>
                     <img src='/images/user.jpg' />
