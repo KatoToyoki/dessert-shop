@@ -26,7 +26,7 @@ const Home = () => {
                     {newsData.map((data) => {
                         return (
                             <Col xs={12} md={4}>
-                                <News id={data.id} imgUrl={data.imgUrl} title={data.title} newsUrl={data.newUrl} />
+                                <News id={data.id} imgUrl={data.imgUrl} title={data.title} />
                             </Col>
                         )
                     })}
